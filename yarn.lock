@@ -1929,7 +1929,7 @@ express-session@~1.11.3:
     uid-safe "~2.0.0"
     utils-merge "1.0.0"
 
-express@^4.13.4:
+express@^4.13.4, express@^4.15.4:
   version "4.15.4"
   resolved "https://registry.yarnpkg.com/express/-/express-4.15.4.tgz#032e2253489cf8fce02666beca3d11ed7a2daed1"
   dependencies:
@@ -3810,6 +3810,12 @@ node-pre-gyp@^0.6.36:
     semver "^5.3.0"
     tar "^2.2.1"
     tar-pack "^3.4.0"
+
+"node-schedule@https://github.com/dmitryrykov-epam/node-schedule.git":
+  version "1.0.1"
+  resolved "https://github.com/dmitryrykov-epam/node-schedule.git#82acd3213a8c6c096330d58b912aa2590b4c6c39"
+  dependencies:
+    express "^4.15.4"
 
 noop-fn@^1.0.0:
   version "1.0.0"
