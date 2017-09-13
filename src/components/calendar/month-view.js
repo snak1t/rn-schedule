@@ -6,7 +6,7 @@ import isSameWeek from 'date-fns/is_same_week';
 
 import Day from './day';
 
-import { weekConfig, getDatePeriod, getWeekDays, getMonthDaysWithAdditionalDays,  } from './utils';
+import { weekConfig, getDatePeriod, getWeekDays, getMonthDaysWithAdditionalDays,  } from './../../utils/date';
 
 const generateKeyForWeekArray = week => `week:${week[0].toISOString().slice(0, 10)}-${week[week.length - 1].toISOString().slice(0, 10)}`;
 const generateKeyForDay = day => `day:${day.toISOString().slice(0, 10)}`;
