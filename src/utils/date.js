@@ -31,3 +31,6 @@ export const getMonthDaysWithAdditionalDays = (day) => getDatePeriod(
 
 export const monthAliases = ['Январь', 'Февряль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 export const getMonthAlias = monthId => monthAliases[monthId];
+
+export const weekDayAliases = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+export const getweekDayAlias = dayId => weekDayAliases[dayId];

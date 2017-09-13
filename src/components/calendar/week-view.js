@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 
 import Day from './day';
 
-import { getWeekDays } from './utils';
+import { getWeekDays } from './../../utils/date';
 
 export default class CalendarWeekView extends React.PureComponent {
     static propTypes = {

@@ -7,7 +7,7 @@ import subMonths from 'date-fns/sub_months';
 import addWeeks from 'date-fns/add_weeks'
 import subWeeks from 'date-fns/sub_weeks';
 
-import { getMonthAlias } from './utils';
+import { getMonthAlias } from './../../utils/date';
 
 import WeekView from './week-view';
 import MonthView from './month-view';
@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff',
         justifyContent: 'space-between',
         alignItems: 'stretch',
+        elevation: 5,
     },
     arrowWrapper: {
         flexDirection: 'column',
