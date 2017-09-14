@@ -16,7 +16,7 @@ export default class Calendar extends React.Component {
     static propTypes = {
         date: PropTypes.instanceOf(Date).isRequired,
         onChange: PropTypes.func.isRequired,
-        isDayHighlightedFn: PropTypes.func,
+        isDayHighlightedFn: PropTypes.func.isRequired,
     }
 
     state = {
@@ -36,10 +36,13 @@ export default class Calendar extends React.Component {
     }
 
     render() {
-        const isDayHighlightedFn = this.props.isDayHighlightedFn ? this.props.isDayHighlightedFn : () => false;
         const view = this.state.isWeekView ?
-            <WeekView date={ this.props.date } isDayHighlightedFn={ isDayHighlightedFn } /> :
-            <MonthView date={ this.props.date } onSelectWeek={ date => this.props.onChange(date) } isDayHighlightedFn={ isDayHighlightedFn } />;
+            <WeekView date={ this.props.date } isDayHighlightedFn={ this.props.isDayHighlightedFn } /> :
+            <MonthView
+                date={ this.props.date }
+                onSelectWeek={ date => this.props.onChange(date) }
+                isDayHighlightedFn={ this.props.isDayHighlightedFn }
+            />;
 
         return (
             <View style={ styles.wrapper }>

@@ -5,11 +5,7 @@ import { View, Text, Image, StyleSheet, TouchableHighlight } from 'react-native'
 export default class PageHeader extends React.PureComponent {
     static propTypes = {
         onMenuPress: PropTypes.func.isRequired,
-        title: PropTypes.string,
-    };
-
-    static defaultProps = {
-        title: "Расписание",
+        title: PropTypes.string.isRequired,
     };
 
     render() {

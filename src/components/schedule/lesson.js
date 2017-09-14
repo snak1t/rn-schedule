@@ -11,7 +11,7 @@ const Lesson = ({ index, isHighlighted, lesson }) => (
             </Text>
         </View>
         <View style={ styles.roomsWrapper } >
-            { lesson.room && lesson.room.map(room => <Text style={ styles.room } key={room}>{ room }</Text>) }
+            { lesson.room && lesson.room.map && lesson.room.map(room => <Text style={ styles.room } key={room}>{ room }</Text>) }
         </View>
     </View>
 );

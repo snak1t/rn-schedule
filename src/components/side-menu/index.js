@@ -114,8 +114,9 @@ const styles = StyleSheet.create({
         left: 0,
         width: '100%',
         height: '100%',
-        zIndex: 10,
-        overflow: 'hidden', 
+        zIndex: 100,
+        overflow: 'hidden',
+        elevation: 100
     },
     animatedWrapper: {
         position: 'relative',
@@ -127,6 +128,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'stretch',
         width: 300,
+        zIndex: 5,
         elevation: 5,
     },
     backdrop: {

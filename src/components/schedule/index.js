@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, ScrollView, StyleSheet } from 'react-native';
+import { View, ScrollView, StyleSheet, Text } from 'react-native';
 
 import DaySchedule from './day-schedule';
 
@@ -17,13 +17,12 @@ export default class Schedule extends React.PureComponent {
 
     render = () => {
         const schedule = this.props.isNumerator ? this.props.numerator : this.props.denominator;
-        console.log(this.props.date)
         const days = getWeekDays(this.props.date)
-            .reduce((acc, next, index) => [...acc, ({ date: next, schedule: schedule[index] || null })], [])
+            .reduce((acc, next, index) => [...acc, ({ date: next, schedule: schedule && schedule[index] || null })], [])
             .filter(({schedule}) => !!schedule);
 
         return (
-            <ScrollView>
+            <ScrollView style={ styles.wrapper }>
                 {
                     days.length ? days.map(({ date, schedule }) => (
                             <DaySchedule
@@ -39,3 +38,9 @@ export default class Schedule extends React.PureComponent {
         );
     }
 }
+
+const styles = StyleSheet.create({
+    wrapper: {
+        padding: 10,
+    }
+})
