@@ -11,7 +11,9 @@ const Lesson = ({ index, isHighlighted, lesson }) => (
             </Text>
         </View>
         <View style={ styles.roomsWrapper } >
-            { lesson.room && lesson.room.map && lesson.room.map(room => <Text style={ styles.room } key={room}>{ room }</Text>) }
+            { lesson.room && lesson.room.map && lesson.room
+                .map(room => <Text style={ styles.room } key={room}>{ room }</Text>)
+            }
         </View>
     </View>
 );
@@ -32,8 +34,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         minHeight: 50,
         backgroundColor: 'white',
-        elevation: 2,
-        marginVertical: 3,
+        borderStyle: 'solid',
+        borderBottomWidth: 1,
+        borderColor: '#eee',
     },
     hightlight: {
         backgroundColor: '#FAFAD2',

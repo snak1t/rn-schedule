@@ -38,6 +38,9 @@ const styles = StyleSheet.create({
     wrapper: {
         padding: 10,
         paddingLeft: 30,
+        backgroundColor: '#fff',
+        elevation: 2,
+        marginVertical: 3,
     },
     header: {
         fontSize: 24,

@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingRight: 40,
         backgroundColor: '#FFFFFF',
-        elevation: 10,
+        elevation: 5,
     },
     imageWrapper: {
         padding: 8,
